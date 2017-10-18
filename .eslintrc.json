@@ -1,0 +1,7 @@
+{
+    "extends": "eslint-config-standard-with-typescript",
+    "parser": "typescript-eslint-parser",
+    "rules": {
+        "no-unused-vars": "warn"
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "snabbdom-toc",
+  "version": "1.0.0",
+  "description": "VNode to table of contents",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "tsc",
+    "unit": "ava",
+    "test": "run-s lint compile unit",
+    "lint": "eslint --ext .ts src/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yarom82/snabbdom-toc.git"
+  },
+  "keywords": [
+    "snabbdom",
+    "vnode",
+    "toc",
+    "table",
+    "of",
+    "contents"
+  ],
+  "author": "Yarom Shoval <yarom.adi@gmail.com> (yarom82)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yarom82/snabbdom-toc/issues"
+  },
+  "homepage": "https://github.com/yarom82/snabbdom-toc#readme",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "eslint": "^4.9.0",
+    "eslint-config-standard-with-typescript": "^1.0.4",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-typescript": "^0.8.0",
+    "npm-run-all": "^4.1.1",
+    "typescript": "^2.5.3",
+    "typescript-eslint-parser": "^8.0.0"
+  },
+  "dependencies": {
+    "@cycle/dom": "^18.3.0",
+    "snabbdom": "^0.7.0",
+    "snabbdom-decontextify": "^3.0.0",
+    "snabbdom-selector": "^1.3.4"
+  }
+}
