@@ -5,8 +5,9 @@ import decontextify from 'snabbdom-decontextify'
 
 const snabbdomToc = (content: VNode[]): VNode => {
   const toc = h('ul', [])
+  const reg = new RegExp('h([1-6])')
   const headers = content.filter((vnode) => {
-    return vnode && vnode.sel && vnode.sel.startsWith('h')
+    return vnode && vnode.sel && reg.test(vnode.sel)
   })
 
   let latestLis = {
