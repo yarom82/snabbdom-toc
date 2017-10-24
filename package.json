@@ -41,9 +41,9 @@
     "typescript-eslint-parser": "^8.0.0"
   },
   "dependencies": {
-    "@cycle/dom": "^18.3.0",
+    "@cycle/dom": "^19.0.0",
     "snabbdom": "^0.7.0",
     "snabbdom-decontextify": "^3.0.0",
-    "snabbdom-selector": "^1.3.4"
+    "snabbdom-selector": "^2.0.0"
   }
 }
