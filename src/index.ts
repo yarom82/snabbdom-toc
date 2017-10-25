@@ -42,9 +42,7 @@ const snabbdomToc = (content: VNode[]): VNode => {
       }
     }
 
-    if (ul) {
-      (ul.children as VNode[]).push(li)
-    }
+    (ul.children as VNode[]).push(li)
     latestLis[hX] = li
     for (let i = hX + 1; i <= 6; i++) {
       latestLis[i] = null
