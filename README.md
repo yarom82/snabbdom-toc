@@ -1,10 +1,37 @@
-# snabbdom-toc [![Greenkeeper badge](https://badges.greenkeeper.io/yarom82/snabbdom-toc.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/yarom82/snabbdom-toc.svg?branch=master)](https://travis-ci.org/yarom82/snabbdom-toc) [![style code](https://img.shields.io/badge/code%20style-tslint-green.svg)](https://palantir.github.io/tslint/) 
+# snabbdom-toc
+[![Greenkeeper badge](https://badges.greenkeeper.io/yarom82/snabbdom-toc.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/yarom82/snabbdom-toc.svg?branch=master)](https://travis-ci.org/yarom82/snabbdom-toc) 
 
-## `snabbdomToc(content: VNode[]) => VNode`
+Generates a table of contents for a provided `VNode[]`.
 
-Returns table of content based on h1-h6 in given `VNode[]` content.
+## API
 
-The content could have not only h1-h6 `VNode`, but they won't be displayed on the table of content.
+`snabbdomToc(content: VNode[]) => VNode`
 
-See test for example.
+## Example
 
+Input:
+
+> ### Blandita quis umeros vomere
+
+> #### Ire regnum errent dum
+
+> Lorem markdownum magis ad hunc.
+
+> #### Omnes ianua si
+
+> Interea te vultus Gallicus adpareat praevertunt et sed temptat quae pro quoque
+nullisque questus.
+
+> #### Et tuum cuius praebebatque
+
+> Pavetque Sicelidas aethera coetum Cepheaque torrens ecquid.
+
+> Levem si cui, scelerata vulnera!
+
+Output:
+
+> - [Blandita quis umeros vomere](#blandita-quis-umeros-vomere)
+>   - [Ire regnum errent dum](#ire-regnum-errent-dum)
+>   - [Omnes ianua si](#omnes-ianua-si)
+>   - [Et tuum cuius praebebatque](#et-tuum-cuius-praebebatque)
