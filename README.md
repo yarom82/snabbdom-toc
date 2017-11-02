@@ -13,20 +13,20 @@ Generates a table of contents for a provided `VNode[]`.
 Input:
 
 > ### Blandita quis umeros vomere
-
+>
 > #### Ire regnum errent dum
-
+>
 > Lorem markdownum magis ad hunc.
-
+>
 > #### Omnes ianua si
-
+>
 > Interea te vultus Gallicus adpareat praevertunt et sed temptat quae pro quoque
 nullisque questus.
-
+>
 > #### Et tuum cuius praebebatque
-
+>
 > Pavetque Sicelidas aethera coetum Cepheaque torrens ecquid.
-
+>
 > Levem si cui, scelerata vulnera!
 
 Output:
