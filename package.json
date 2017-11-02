@@ -22,6 +22,9 @@
     "contents"
   ],
   "author": "Yarom Shoval <yarom.adi@gmail.com> (yarom82)",
+  "contributors": [
+    "Shahar Or <mightyiampresence@gmail.com> (http://mightyi.am)"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yarom82/snabbdom-toc/issues"
