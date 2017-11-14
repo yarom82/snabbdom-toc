@@ -8,7 +8,8 @@
     "compile": "tsc",
     "unit": "nyc ava",
     "test": "run-s lint compile unit",
-    "lint": "eslint --ext .ts src/**/*"
+    "lint": "eslint --ext .ts src/**/*",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
