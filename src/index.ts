@@ -3,10 +3,20 @@ import { VNode } from 'snabbdom/vnode'
 import { selectorParser } from 'snabbdom-selector'
 import decontextify from 'snabbdom-decontextify'
 
+const flatten = (vnodes: VNode[], flat: VNode[] = []): VNode[] => {
+  for (const vnode of vnodes) {
+    flat.push(vnode)
+    if (Array.isArray(vnode.children)) {
+      flatten(vnode.children as VNode[], flat)
+    }
+  }
+  return flat
+}
+
 const snabbdomToc = (content: VNode[]): VNode => {
   const toc = h('ul', [])
   const reg = new RegExp('h([1-6])')
-  const headers = content.filter((vnode) => {
+  const headers = flatten(content).filter((vnode) => {
     return vnode && vnode.sel && reg.test(vnode.sel)
   })
 
