@@ -494,3 +494,74 @@ test(
     ])
   ])
 )
+
+test(
+  'nested input',
+  io,
+  [
+    h('div', [
+      h('h1#1a', '1a'),
+      h('p', '0-1a'),
+      h('p', '1-1a'),
+      h('p', '2-1a'),
+      h('div', [
+        h('h2#1a-2a', '1a-2a')
+      ])
+    ]),
+    h('div', [
+      h('h3#1a-2a-3a', '1a-2a-3a'),
+      h('p', '0-1a-2a-3a'),
+      h('h4#1a-2a-3a-4a', '1a-2a-3a-4a'),
+      h('h2#1a-2b', '1a-2b')
+    ]),
+    h('h2#1a-2c', '1a-2c'),
+    h('h2#1a-2d', '1a-2d'),
+    h('div', [
+      h('div', [
+
+        h('p', '0-1a-2d')
+      ]),
+      h('h3#1a-2d-3a', '1a-2d-3a'),
+      h('h6#1a-2d-3a-6a', '1a-2d-3a-6a')
+    ])
+  ],
+  h('ul', [
+    h('li', [
+      h('a', { attrs: { href: '#1a' } }, '1a'),
+      h('ul', [
+        h('li', [
+          h('a', { attrs: { href: '#1a-2a' } }, '1a-2a'),
+          h('ul', [
+            h('li', [
+              h('a', { attrs: { href: '#1a-2a-3a' } }, '1a-2a-3a'),
+              h('ul', [
+                h('li', [
+                  h('a', { attrs: { href: '#1a-2a-3a-4a' } }, '1a-2a-3a-4a')
+                ])
+              ])
+            ])
+          ])
+        ]),
+        h('li', [
+          h('a', { attrs: { href: '#1a-2b' } }, '1a-2b')
+        ]),
+        h('li', [
+          h('a', { attrs: { href: '#1a-2c' } }, '1a-2c')
+        ]),
+        h('li', [
+          h('a', { attrs: { href: '#1a-2d' } }, '1a-2d'),
+          h('ul', [
+            h('li', [
+              h('a', { attrs: { href: '#1a-2d-3a' } }, '1a-2d-3a'),
+              h('ul', [
+                h('li', [
+                  h('a', { attrs: { href: '#1a-2d-3a-6a' } }, '1a-2d-3a-6a')
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+)
