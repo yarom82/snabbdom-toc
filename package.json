@@ -1,8 +1,9 @@
 {
   "name": "snabbdom-toc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VNode to table of contents",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "compile": "tsc",
     "unit": "nyc ava",
