@@ -436,6 +436,40 @@ test(
 )
 
 test(
+  'reads `id` attribute from data object',
+  io,
+  [
+    h('h2', { attrs: { id: '2a' } }, '2a'),
+    h('h2', { attrs: { id: '2b' } }, '2b')
+  ],
+  h('ul', [
+    h('li', [
+      h('a', { attrs: { href: '#2a' } }, '2a')
+    ]),
+    h('li', [
+      h('a', { attrs: { href: '#2b' } }, '2b')
+    ])
+  ])
+)
+
+test(
+  'prefers `id` attribute from data object',
+  io,
+  [
+    h('h2#foo', { attrs: { id: '2a' } }, '2a'),
+    h('h2#bar', { attrs: { id: '2b' } }, '2b')
+  ],
+  h('ul', [
+    h('li', [
+      h('a', { attrs: { href: '#2a' } }, '2a')
+    ]),
+    h('li', [
+      h('a', { attrs: { href: '#2b' } }, '2b')
+    ])
+  ])
+)
+
+test(
   'big and complex',
   io,
   [
